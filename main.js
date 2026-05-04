@@ -14,19 +14,19 @@ function getTranslateXY(element) {
 function movement(e) {
     console.log("1st")
   if (e.key == "s") {
-    plr.style.transform += "translate(0px, 2px)";
+    plr.style.transform += "translate(0px, 10px)";
       console.log("2nd");
   }
   if (e.key == "d") {
-    plr.style.transform += "translate(2px, 0px)";
+    plr.style.transform += "translate(10px, 0px)";
       console.log("2nd");
   }
   if (e.key == "w") {
-    plr.style.transform += "translate(0px, -2px)";
+    plr.style.transform += "translate(0px, -10px)";
       console.log("2nd");
   }
   if (e.key == "a") {
-    plr.style.transform += "translate(-2px, 0px)";
+    plr.style.transform += "translate(-10px, 0px)";
       console.log("2nd");
   }
 }
