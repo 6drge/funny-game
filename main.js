@@ -16,7 +16,7 @@ function getTranslateXY(element) {
 }
 
 function movement(e) {
-    sleep(500)
+    sleep(1000)
     console.log("1st")
   if (e.key == "s") {
     plr.style.transform += "translate(0px, 10px)";
