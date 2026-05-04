@@ -14,11 +14,11 @@ function getTranslateXY(element) {
 function movement(e) {
     console.log("1st")
   if (e.key == "w") {
-    plr.style.transform = "translate(0px, 1px)";
+    plr.style.transform += "translate(0px, 1px)";
       console.log("2nd");
   }
   if (e.key == "d") {
-    plr.style.transform = "translate(1px, 0px)";
+    plr.style.transform += "translate(1px, 0px)";
       console.log("2nd");
   }
 }
