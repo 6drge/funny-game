@@ -14,15 +14,13 @@ function getTranslateXY(element) {
 function movement(e) {
   if (e.key == "w") {
     let xy = getTranslateXY(plr);
-    let x1 = xy.translateX;
-    let y1 = xy.translateY;
+    let y1 = xy[1];
     let up = y1+1;
     plr.style.transform = "translate(${x1}px, ${up}px);";
   }
   if (e.key == "d") {
     let xy = getTranslateXY(plr);
-    let x1 = xy.translateX;
-    let y1 = xy.translateY;
+    let x1 = xy[0];
     let right = x1+1;
     plr.style.transform = "translate(${right}px, ${y1}px);";
   }
