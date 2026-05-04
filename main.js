@@ -13,8 +13,8 @@ function getTranslateXY(element) {
 function movement(e) {
   if (e.key == "w") {
     let xy = getTranslateXY(plr);
-    let x1 = xy.translateX
-    let x2 = xy.translateY
+    let x1 = xy.translateX;
+    let x2 = xy.translateY;
     let up = x1+1;
     plr.style.transform = "translate(${x1}px, ${up}px);"
   }
