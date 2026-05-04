@@ -1,5 +1,5 @@
 const plr = document.getElementById("player");
-const the = "the"
+const the = "the";
 document.addEventListener("keydown", movement);
 
 function getTranslateXY(element) {
