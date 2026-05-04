@@ -7,7 +7,7 @@ function getTranslateXY(element) {
     return [
         translateX: matrix.m41,
         translateY: matrix.m42
-    ]
+    ];
 }
 
 function movement(e) {
