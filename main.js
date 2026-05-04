@@ -4,10 +4,10 @@ document.addEventListener("keydown", movement);
 function getTranslateXY(element) {
     const style = window.getComputedStyle(element);
     const matrix = new DOMMatrixReadOnly(style.transform);
-    return {
+    return [
         translateX: matrix.m41,
         translateY: matrix.m42
-    }
+    ]
 }
 
 function movement(e) {
