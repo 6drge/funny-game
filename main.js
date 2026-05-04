@@ -2,6 +2,10 @@ const plr = document.getElementById("player");
 const the = "the";
 document.addEventListener("keydown", movement);
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 function getTranslateXY(element) {
     const style = window.getComputedStyle(element);
     const matrix = new DOMMatrixReadOnly(style.transform);
@@ -12,6 +16,7 @@ function getTranslateXY(element) {
 }
 
 function movement(e) {
+    sleep(500)
     console.log("1st")
   if (e.key == "s") {
     plr.style.transform += "translate(0px, 10px)";
