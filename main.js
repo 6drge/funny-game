@@ -12,17 +12,20 @@ function getTranslateXY(element) {
 }
 
 function movement(e) {
+    console.log("1st")
   if (e.key == "w") {
     let xy = getTranslateXY(plr);
     let y1 = xy[1];
     let up = y1+1;
     plr.style.transform = "translate(${x1}px, ${up}px);";
+      console.log("2nd");
   }
   if (e.key == "d") {
     let xy = getTranslateXY(plr);
     let x1 = xy[0];
     let right = x1+1;
     plr.style.transform = "translate(${right}px, ${y1}px);";
+      console.log("2nd");
   }
 }
 
