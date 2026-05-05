@@ -22,7 +22,7 @@ let keys = ["none","none","none","none"];
 
 function notMoving(e) {
   if (e.key == "w" || "a" || "s" || "d") {
-    keys[e.key] = "none";
+    keys[keys.indexOf(e.key)] = "none";
   }
 }
 
