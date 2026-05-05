@@ -1,5 +1,5 @@
 const plr = document.getElementById("player");
-const the = "the";
+const the = "the fish";
 document.addEventListener("keydown", movement);
 document.addEventListener("keyup", notMoving);
 
