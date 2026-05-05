@@ -1,4 +1,5 @@
-onmessage = (keys) => {
+onmessage = (e) => {
+  let keys = e.keys;
   if (keys.includes("s")) {
       postMessage("translate(0px, 10px)");
   }
