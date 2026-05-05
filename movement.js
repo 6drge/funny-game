@@ -1,20 +1,14 @@
-onmessage = (e) => {
-  let plr = e[0];
-  let keys = e[1];
+onmessage = (keys) => {
   if (keys.includes("s")) {
-    plr.style.transform += "translate(0px, 10px)";
-      console.log("2nd");
+      postMessage("translate(0px, 10px)");
   }
   if (keys.includes("d")) {
-    plr.style.transform += "translate(10px, 0px)";
-      console.log("2nd");
+      postMessage("translate(10px, 0px)");
   }
   if (keys.includes("w")) {
-    plr.style.transform += "translate(0px, -10px)";
-      console.log("2nd");
+      postMessage("translate(0px, -10px)");
   }
   if (keys.includes("a")) {
-    plr.style.transform += "translate(-10px, 0px)";
-      console.log("2nd");
+      postMessage("translate(-10px, 0px)");
   }
 };
