@@ -1,4 +1,4 @@
-const plr = document.getElementById("player").cloneNode(true);
+const plr = document.getElementById("player");
 const the = "the";
 document.addEventListener("keydown", movement);
 document.addEventListener("keyup", notMoving);
@@ -41,7 +41,8 @@ function movement(e) {
     if (e.key == "d") {
       keys[3] = e.key;
     }
-    movements.postMessage([plr, keys]);
+    let plr2 = plr.cloneNode(true);
+    movements.postMessage([plr2, keys]);
 }
 
 function isCollide(a, b) {
