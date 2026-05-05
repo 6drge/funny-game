@@ -1,19 +1,19 @@
 onmessage = (e) => {
   let plr = e[0]
-  let key = e[1]
-  if (key == "s") {
+  let keys = e[1]
+  if (keys.includes("s")) {
     plr.style.transform += "translate(0px, 10px)";
       console.log("2nd");
   }
-  if (key == "d") {
+  if (keys.includes("d")) {
     plr.style.transform += "translate(10px, 0px)";
       console.log("2nd");
   }
-  if (key == "w") {
+  if (keys.includes("w")) {
     plr.style.transform += "translate(0px, -10px)";
       console.log("2nd");
   }
-  if (key == "a") {
+  if (keys.includes("a")) {
     plr.style.transform += "translate(-10px, 0px)";
       console.log("2nd");
   }
