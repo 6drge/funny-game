@@ -21,22 +21,6 @@ function movement(e) {
     sleep(500)
     console.log("1st");
   movements.postMessage([plr, e.key]);
-  if (e.key == "s") {
-    plr.style.transform += "translate(0px, 10px)";
-      console.log("2nd");
-  }
-  if (e.key == "d") {
-    plr.style.transform += "translate(10px, 0px)";
-      console.log("2nd");
-  }
-  if (e.key == "w") {
-    plr.style.transform += "translate(0px, -10px)";
-      console.log("2nd");
-  }
-  if (e.key == "a") {
-    plr.style.transform += "translate(-10px, 0px)";
-      console.log("2nd");
-  }
 }
 
 function isCollide(a, b) {
