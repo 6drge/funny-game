@@ -15,9 +15,12 @@ function getTranslateXY(element) {
     };
 }
 
+const movements = new Worker("movement.js");
+
 function movement(e) {
-    sleep(1000)
-    console.log("1st")
+    sleep(500)
+    console.log("1st");
+  movements.postMessage(e.key);
   if (e.key == "s") {
     plr.style.transform += "translate(0px, 10px)";
       console.log("2nd");
