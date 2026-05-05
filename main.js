@@ -19,7 +19,7 @@ function getTranslateXY(element) {
 const movements = new Worker("movement.js");
 
 movements.onmessage = function(event) {
-  plr.style.transform = event.data;
+  plr.style.transform += event.data;
 }
 
 let keys = ["none","none","none","none"];
