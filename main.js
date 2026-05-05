@@ -1,4 +1,4 @@
-const plr = document.getElementById("player");
+const plr = document.getElementById("player").cloneNode(true);
 const the = "the";
 document.addEventListener("keydown", movement);
 document.addEventListener("keyup", notMoving);
