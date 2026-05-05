@@ -18,6 +18,10 @@ function getTranslateXY(element) {
 
 const movements = new Worker("movement.js");
 
+movements.onmessage = function(event) {
+  plr.style.transform = event[0];
+}
+
 let keys = ["none","none","none","none"];
 
 function notMoving(e) {
@@ -41,8 +45,7 @@ function movement(e) {
     if (e.key == "d") {
       keys[3] = e.key;
     }
-    let plr2 = plr.cloneNode(true);
-    movements.postMessage([plr2, keys]);
+    movements.postMessage(keys);
 }
 
 function isCollide(a, b) {
