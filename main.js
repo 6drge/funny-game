@@ -1,6 +1,7 @@
 const plr = document.getElementById("player");
 const the = "the";
 document.addEventListener("keydown", movement);
+document.addEventListener("keyup", notMoving);
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -17,10 +18,30 @@ function getTranslateXY(element) {
 
 const movements = new Worker("movement.js");
 
+let keys = ["none","none","none","none"]
+
+function notMoving(e) {
+  if (e.key == "w" || "a" || "s" || "d") {
+    keys[e.key] = "none"
+  }
+}
+
 function movement(e) {
     sleep(500)
     console.log("1st");
-  movements.postMessage([plr, e.key]);
+    if (e.key == "w") {
+      keys[0] = e.key
+    }
+    if (e.key == "a") {
+      keys[1] = e.key
+    }
+    if (e.key == "s") {
+      keys[2] = e.key
+    }
+    if (e.key == "d") {
+      keys[3] = e.key
+    }
+    movements.postMessage([plr, e.key]);
 }
 
 function isCollide(a, b) {
