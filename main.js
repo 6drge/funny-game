@@ -20,7 +20,7 @@ const movements = new Worker("movement.js");
 function movement(e) {
     sleep(500)
     console.log("1st");
-  movements.postMessage(e.key);
+  movements.postMessage([plr, e.key]);
   if (e.key == "s") {
     plr.style.transform += "translate(0px, 10px)";
       console.log("2nd");
