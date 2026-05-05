@@ -41,7 +41,7 @@ function movement(e) {
     if (e.key == "d") {
       keys[3] = e.key
     }
-    movements.postMessage([plr, e.key]);
+    movements.postMessage([plr, keys]);
 }
 
 function isCollide(a, b) {
