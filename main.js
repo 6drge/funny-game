@@ -31,7 +31,6 @@ function notMoving(e) {
 }
 
 function movement(e) {
-    sleep(20);
     if (e.key == "w") {
       keys[0] = e.key;
     }
